@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Milk Counter</title>
+    <link rel="stylesheet" href="/static/styles.css" />
+  </head>
+  <body>
+    <main class="app-shell">
+      <header class="topbar">
+        <div>
+          <p class="eyebrow">Daily purchase</p>
+          <h1>Milk Counter</h1>
+        </div>
+        <label class="date-control">
+          Date
+          <input id="purchaseDate" type="date" />
+        </label>
+      </header>
+
+      <section class="summary-grid" aria-label="Daily totals">
+        <div class="metric">
+          <span>Packets</span>
+          <strong id="totalPackets">0</strong>
+        </div>
+        <div class="metric primary-metric">
+          <span>Total</span>
+          <strong id="dailyTotal">Rs 0</strong>
+        </div>
+        <div class="metric">
+          <span>Average</span>
+          <strong id="averagePrice">Rs 0</strong>
+        </div>
+      </section>
+
+      <section class="workspace">
+        <section class="packet-panel" aria-label="Milk packet buttons">
+          <div class="section-heading">
+            <h2>Tap Packet</h2>
+            <p>Each tap adds one packet to the selected date.</p>
+          </div>
+          <div id="packetButtons" class="packet-grid"></div>
+        </section>
+
+        <aside class="cart-panel" aria-label="Today cart">
+          <div class="section-heading">
+            <h2>Cart</h2>
+            <p id="cartDateLabel">Today</p>
+          </div>
+          <div id="cartItems" class="cart-list"></div>
+        </aside>
+      </section>
+
+      <section class="history-panel" aria-label="Recent purchase history">
+        <div class="section-heading">
+          <h2>Recent Days</h2>
+          <p>Saved automatically in SQLite.</p>
+        </div>
+        <div id="historyList" class="history-list"></div>
+      </section>
+    </main>
+
+    <template id="packetTemplate">
+      <article class="packet-card">
+        <button class="packet-button" type="button">
+          <span class="packet-image"></span>
+          <span class="packet-name"></span>
+          <span class="packet-price"></span>
+        </button>
+        <label class="image-upload">
+          <span>Upload picture</span>
+          <input type="file" accept="image/*" />
+        </label>
+        <div class="image-locked" aria-label="Packet image saved">Picture saved</div>
+      </article>
+    </template>
+
+    <script src="/static/app.js"></script>
+  </body>
+</html>

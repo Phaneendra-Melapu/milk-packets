@@ -1,0 +1,15 @@
+backend/.packages/
+backend/.venv/
+backend/.env
+backend/login_system.db
+backend/uploads/
+backend/server-debug.*.log
+backend/server.*.log
+backend/app/__pycache__/
+backend/__pycache__/
+backend/logs/
+__pycache__/
+node_modules/
+tests/node_modules/
+tests/test-results/
+tests/playwright-report/
