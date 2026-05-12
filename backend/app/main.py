@@ -80,6 +80,16 @@ def index() -> FileResponse:
     return FileResponse(FRONTEND_DIR / "index.html")
 
 
+@app.get("/manifest.webmanifest")
+def manifest() -> FileResponse:
+    return FileResponse(FRONTEND_DIR / "manifest.webmanifest", media_type="application/manifest+json")
+
+
+@app.get("/sw.js")
+def service_worker() -> FileResponse:
+    return FileResponse(FRONTEND_DIR / "sw.js", media_type="application/javascript")
+
+
 @app.get("/health")
 def health_check() -> dict[str, str]:
     return {"status": "ok"}

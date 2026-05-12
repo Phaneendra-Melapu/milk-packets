@@ -1,0 +1,19 @@
+{
+  "name": "Milk Counter",
+  "short_name": "Milk",
+  "description": "Daily milk packet counter for Gold, Blue, and Green packets.",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#f8f7f2",
+  "theme_color": "#1f3130",
+  "orientation": "portrait",
+  "icons": [
+    {
+      "src": "/static/icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}
